@@ -3,7 +3,7 @@ package com.coors.expenseroom.database;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-import static com.coors.expenseroom.database.ExpenseEntity.TABLE_EXPENSE;
+import static com.coors.expenseroom.database.ExpenseDatabase.TABLE_EXPENSE;
 
 /**
  * Created by z8v on 2018/3/4.
@@ -11,7 +11,6 @@ import static com.coors.expenseroom.database.ExpenseEntity.TABLE_EXPENSE;
 
 @Entity(tableName = TABLE_EXPENSE)
 public class ExpenseEntity {
-    public static final String TABLE_EXPENSE = "expense";
     @PrimaryKey(autoGenerate = true)
     private int uid;
     private String cdate;

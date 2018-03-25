@@ -7,6 +7,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
+import static com.coors.expenseroom.database.ExpenseDatabase.TABLE_EXPENSE;
 
 
 /**
@@ -18,7 +19,7 @@ public interface ExpenseDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public void insert(ExpenseEntity expenseEntity);
 
-    @Query("select * from " + ExpenseEntity.TABLE_EXPENSE)
+    @Query("select * from " + TABLE_EXPENSE)
     public List<ExpenseEntity> getAll();
 
 }

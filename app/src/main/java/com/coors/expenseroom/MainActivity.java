@@ -1,6 +1,5 @@
 package com.coors.expenseroom;
 
-import android.arch.persistence.room.Room;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,8 +7,6 @@ import android.util.Log;
 import com.coors.expenseroom.database.ExpenseDao;
 import com.coors.expenseroom.database.ExpenseDatabase;
 import com.coors.expenseroom.database.ExpenseEntity;
-
-import static com.coors.expenseroom.database.ExpenseEntity.TABLE_EXPENSE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        createDB();
-        insertList();
+        initDB();
+//        insertList();
         getData();
     }
 
@@ -39,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         expenseDao.insert(entity3);
     }
 
-    private void createDB() {
+    private void initDB() {
         database = ExpenseDatabase.getDatabase(this);
         expenseDao = database.expenseDao();
     }

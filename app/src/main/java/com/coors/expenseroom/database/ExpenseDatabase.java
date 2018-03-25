@@ -13,6 +13,8 @@ import android.content.Context;
 @Database(entities = {ExpenseEntity.class}, version = 1)
 public abstract class ExpenseDatabase extends RoomDatabase {
     public static final String DB_NAME = "Expense";
+    public static final String TABLE_EXPENSE = "expense";
+    public static final String TABLE_UN_SYNC_DATA = "un_sync_data";
     private static ExpenseDatabase INSTANCE;
     public abstract ExpenseDao expenseDao();
 
