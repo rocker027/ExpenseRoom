@@ -59,4 +59,12 @@ public class UnSyncDataEntity {
     public void setUsdUplaodSuccessFlag(int usdUplaodSuccessFlag) {
         this.usdUplaodSuccessFlag = usdUplaodSuccessFlag;
     }
+
+    public long getUsdId() {
+        return usdId;
+    }
+
+    public void setUsdId(long usdId) {
+        this.usdId = usdId;
+    }
 }
